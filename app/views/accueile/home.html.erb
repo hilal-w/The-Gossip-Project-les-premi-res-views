@@ -1,0 +1,15 @@
+<h1>The Gossip Project</h1>
+<p>Bienvenue dans notre application <strong><%= @user.first_name %></strong></p>
+
+<p>
+<% @gossip.length.times do |i|%>
+    <div class="card" style="width: 18rem;">
+      <div class="card-body">
+        <h5 class="card-title"><%= @gossip[i].title%></h5>
+        <h6 class="card-text">par : <%= @gossip[i].user.first_name%></h6>
+        <p class="card-text"> </p>
+        <a href="/home/potin/<%=i+1%>" class="btn btn-primary">Go to Gossip</a>
+      </div>
+    </div>
+<%end%>
+</p>
